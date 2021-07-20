@@ -13,9 +13,9 @@ jobs:
     steps:
       - name: payload
         run: | 
-             echo %{{ github.event.client_payload.env}}
-             echo %{{ github.event.client_payload.unit}}
-             echo %{{ github.event.client_payload.integration}}
+             echo ${{ github.event.client_payload.env}}
+             echo ${{ github.event.client_payload.unit}}
+             echo ${{ github.event.client_payload.integration}}
       - name: List Files
         run: |
           pwd
