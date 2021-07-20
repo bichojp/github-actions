@@ -1,0 +1,30 @@
+name: Actions Workflow
+
+#on: [push, pull_request]
+on:
+  repository_dispatch:
+    types: [event]
+  pull_request:
+   types: [opened, assigned, opened]
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List Files
+        run: |
+          pwd
+          ls -ls
+      - name: Checkout Repo
+        uses: actions/checkout@v1
+      - name: List Files
+        run: |
+          pwd
+          ls -als
+      - name: Simple JS Action
+        id: greet
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-greet: Vic
+      - name: Log Greating Time  
+        run: echo "${{steps.greet.outputs.time}}"
