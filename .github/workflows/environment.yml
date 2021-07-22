@@ -1,6 +1,7 @@
 name: Evinroment Variables
 
-on: push
+on: 
+  push:
 
 env:
   WF_ENV: Available to all JOBS
