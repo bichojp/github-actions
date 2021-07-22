@@ -1,7 +1,9 @@
 name: Evinroment Variables
 
-on: 
+on:
   push:
+    branches:
+      - main
 
 env:
   WF_ENV: Available to all JOBS
