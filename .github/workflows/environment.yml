@@ -18,7 +18,7 @@ jobs:
         env:
           STEP_ENV: available to only this step
         run: |
-          echo ${{ WF_ENV }}
+          echo ${{ env.WF_ENV }}
       - name: Log ENV V2
         run: |
           echo ${{ github.event.client_payload.env}}
