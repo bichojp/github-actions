@@ -20,6 +20,14 @@ jobs:
         run: |
           echo ${{ env.WF_ENV }}
           echo ${{ env.JOB_ENV }}
+          echo ${{ env.STEP_ENV }}
       - name: Log ENV V2
         run: |
-          echo ${{ github.event.client_payload.env}}
+          echo ${{ env.WF_ENV }}
+          echo ${{ env.JOB_ENV }}
+          echo ${{ env.STEP_ENV }}
+
+          
+          
+          
+          
