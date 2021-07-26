@@ -31,14 +31,14 @@ jobs:
     steps:
       - name: Log Default 
         run: |
-          echo "GITHUB_WORKFLOW  ${{ env.GITHUB_WORKFLOW }}"
+          echo "GITHUB_WORKFLOW  ${{ github.workflow }}"
           echo "GITHUB_ACTION  ${{ env.GITHUB_ACTION }}"
           echo "GITHUB_ACTIONS  ${{ env.GITHUB_ACTIONS }}"
           echo "GITHUB_ACTOR  ${{ env.GITHUB_ACTOR }}"
           echo "GITHUB_REPOSITORY  ${{ env.GITHUB_REPOSITORY }}"
           echo "GITHUB_EVENT_NAME  ${{ env.GITHUB_EVENT_NAME }}"
           echo "GITHUB_WORKSPACE  ${{ env.GITHUB_WORKSPACE }}"
-          echo "GITHUB_SHA  ${{ env.GITHUB_SHA }}"
+          echo "GITHUB_SHA  ${{ github.sha }}"
           echo "GITHUB_REF  ${{ env.GITHUB_REF }}"
           echo "WF_ENV: ${{ env.WF_ENV }}"
           echo "JOB_ENV: ${{ env.JOB_ENV }}"
