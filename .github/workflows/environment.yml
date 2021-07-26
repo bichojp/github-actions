@@ -38,7 +38,7 @@ jobs:
           echo "GITHUB_REPOSITORY  ${{ github.repository }}"
           echo "GITHUB_EVENT_NAME  ${{ github.event_name }}"
           echo "GITHUB_WORKSPACE  ${{ github.workspace }}"
-          echo "GITHUB_SHA  ${{ github.sha }}"
+          echo "GITHUB_SHA  ${GITHUB_SHA}"
           echo "GITHUB_REF  ${{ github.ref }}"
           echo "WF_ENV: ${{ env.WF_ENV }}"
           echo "JOB_ENV: ${{ env.JOB_ENV }}"
